@@ -30,9 +30,7 @@ def analyseContent(sentence):
 def makeImage(text):
     wc = WordCloud(font_path=font_path,
                    background_color="white", max_words=1000)
-    # generate word cloud
     wc.generate_from_frequencies(text)
-    # show
     plt.imshow(wc, interpolation="bilinear")
     plt.axis("off")
     plt.show()
