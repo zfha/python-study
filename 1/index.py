@@ -12,7 +12,7 @@ font_path = path.join('SimHei.ttf')
 
 
 def getHTMLContent():
-    url = "https://juejin.im/post/5d8d9eeaf265da5b783ef45c"
+    url = "https://36kr.com/p/5251271"
     page = urllib.request.urlopen(url)
     html = page.read().decode('utf-8')
     reg = re.compile('<[^>]*>')
@@ -38,6 +38,8 @@ def makeImage(text):
 
 sentence = getHTMLContent()
 keywords = analyseContent(sentence)
+
+print(keywords)
 
 dict = {}
 for item in keywords:
